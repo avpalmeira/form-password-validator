@@ -2,6 +2,8 @@
 
 A simple form page that validates name, email and password for a pre-defined REST API endpoint.
 
+<img alt="form" src="docs/password-validator.png" width="600" />
+
 ## How to run
 
 ### Option 1: CodeSandbox

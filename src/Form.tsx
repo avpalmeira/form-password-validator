@@ -68,7 +68,7 @@ export default function Form() {
           <TextField
             size="small"
             margin="normal"
-            placeholder="Nome"
+            placeholder="Name"
             {...register("name")}
           />
           {errors.name && (
@@ -85,7 +85,7 @@ export default function Form() {
           )}
           <TextField
             size="small"
-            placeholder="Senha"
+            placeholder="Password"
             margin="normal"
             {...register("password")}
           />
@@ -118,7 +118,7 @@ export default function Form() {
               type="submit"
               sx={{ width: "100%" }}
             >
-              Enviar
+              Send
             </Button>
           </Grid>
         </Grid>
