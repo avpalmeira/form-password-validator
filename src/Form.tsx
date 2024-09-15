@@ -63,7 +63,7 @@ export default function Form() {
   return (
     <Container maxWidth="sm" sx={{ paddingTop: "32px" }}>
       <form onSubmit={handleSubmit(onSuccessSubmit, onErrorSubmit)}>
-        <Typography variant="h4">Valide sua senha</Typography>
+        <Typography variant="h4">Validate your password</Typography>
         <Grid container direction="column" m={0} mb={2}>
           <TextField
             size="small"

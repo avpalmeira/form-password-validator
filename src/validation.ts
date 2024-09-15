@@ -2,17 +2,17 @@ import { z } from "zod";
 import { MIN_LIMIT_PWD, MAX_LIMIT_PWD } from "./constants";
 
 export const VALIDATION_ERROR_MESSAGES = {
-  NOT_SIX_DIGITS: "Senha deve conter 6 dígitos",
-  NO_TWO_ADJACENT_DIGITS: "Senha deve conter 2 dígitos adjacentes iguais",
+  NOT_SIX_DIGITS: "Password must contain 6 digits",
+  NO_TWO_ADJACENT_DIGITS: "Password must contain 2 adjacent digits",
   HAS_DECREASING_DIGITS:
-    "Senha deve conter dígitos em uma sequencia crescente ou de mesmo valor",
-  NOT_WITHIN_LIMITS: `Senha deve estar entre os números ${MIN_LIMIT_PWD} e ${MAX_LIMIT_PWD}`,
+    "Password must not contain digits in a decreasing sequence",
+  NOT_WITHIN_LIMITS: `Password must be between numbers ${MIN_LIMIT_PWD} and ${MAX_LIMIT_PWD}`,
 };
 
 // Define the validation schemas
 export const formSchema = z.object({
-  name: z.string().min(1, { message: "Nome é obrigatório" }),
-  email: z.string().email({ message: "Endereço de email inválido" }),
+  name: z.string().min(1, { message: "Name is required" }),
+  email: z.string().email({ message: "Invalid email address" }),
   password: z.string().superRefine((arg, ctx) => {
     if (!isSixDigits(arg)) {
       ctx.addIssue({
